@@ -7,9 +7,11 @@
         "target": "esnext",
         "jsx": "react",
         "lib": ["dom", "es2015", "es2017"],
-        "esModuleInterop": true
+        "esModuleInterop": true,
+        "baseUrl": "."
     },
     "include": [
-        "./src/**/*"
+        "./src/**/*",
+        "node_modules/babel-plugin-react-intl-auto/**/*.d.ts"
     ]
 }

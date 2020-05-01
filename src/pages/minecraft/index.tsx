@@ -1,11 +1,11 @@
 import * as React from 'react'
 import Layout from "src/components/layout"
-import Home from "src/components/Home"
+import Minecraft from "src/components/Minecraft"
 
 const Component: React.FC = () => {
   return (
     <Layout>
-      <Home/>
+      <Minecraft/>
     </Layout>
   )
 }

@@ -9,8 +9,10 @@
     "gatsby": "^2.20.25",
     "gatsby-link": "^2.3.4",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
+    "gatsby-plugin-intl": "^0.3.3",
     "gatsby-plugin-react-helmet": "^3.2.4",
     "gatsby-plugin-typescript": "^2.3.3",
+    "gatsby-source-contentful": "^2.2.10",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-helmet": "^6.0.0",
@@ -26,9 +28,14 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "i18n": "npx extract-messages -l=en,ja -o src/intl --flat true 'src/**/*.ts'"
   },
   "devDependencies": {
+    "babel-plugin-react-intl-auto": "^3.3.0",
+    "babel-preset-gatsby": "^0.4.0",
+    "extract-react-intl-messages": "^4.1.1",
+    "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^2.0.4"
   },
   "contributors": [
