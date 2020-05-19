@@ -5,7 +5,7 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `negi NOC`,
+    title: `Negi NOC`,
     authors: [
       { name: 'Tori', slug: 'tori' },
       { name: 'Neko', slug: 'neko' },
@@ -13,8 +13,9 @@ module.exports = {
     ]
   },
   plugins: [
+    "gatsby-plugin-theme-ui",
     {
-      resolve: 'gatsby-plugin-graphql-codegen',
+      resolve: `gatsby-plugin-graphql-codegen`,
       options: {
         fileName: `types/graphql-types.d.ts`
       }
@@ -42,6 +43,26 @@ module.exports = {
         redirect: true,
       },
     },
-    'gatsby-plugin-root-import'
+    `gatsby-plugin-emotion`,
+    `gatsby-plugin-root-import`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: 'gatsby-remark-prismjs-title',
+            options: {
+            }
+          },
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {
+
+            }
+          }
+        ]
+      }
+    }
   ],
 }

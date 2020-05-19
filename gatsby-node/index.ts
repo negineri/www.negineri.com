@@ -1,25 +1,45 @@
 import path from "path"
 import { GatsbyNode } from "gatsby"
-import { Site, SiteSiteMetadataAuthors } from "../types/graphql-types"
-// ______________________________________________________
-//
+import { QueryContentfulBlogPost1Args } from "src/../types/graphql-types"
+import { ECDH } from "crypto"
+import Component from "src/components/head"
+
 type Result = {
-  site: Site
+  allContentfulBlogPost1: {
+    nodes: QueryContentfulBlogPost1Args[]
+  }
 }
-export type AuthorPageContext = {
-  author: SiteSiteMetadataAuthors
-} // template で利用するため export
-// ______________________________________________________
-//
+
+type BlogPost = {
+  [key: string]: QueryContentfulBlogPost1Args;
+}
+
+export type BlogPostContext = {
+  post: BlogPost;
+}
+
+export type BlogPostsContext = {
+  blogPosts: BlogPosts
+}
+
+type BlogPosts = {
+  [key: string]: BlogPost;
+}
+
 const query = `
 {
-  site {
-    siteMetadata {
+  allContentfulBlogPost1 {
+    nodes {
+      id
       title
-      authors {
-        name
-        slug
+      body {
+        childMarkdownRemark {
+          html
+        }
       }
+      node_locale
+      contentful_id
+      createdAt
     }
   }
 }
@@ -32,18 +52,44 @@ export const createPages: GatsbyNode["createPages"] = async ({
   if (result.errors || !result.data) {
     throw result.errors
   }
-  const { siteMetadata } = result.data.site
-  if (!siteMetadata || !siteMetadata.authors) {
-    throw new Error("undefined authors")
+  const { allContentfulBlogPost1 } = result.data
+  if (!allContentfulBlogPost1 || !allContentfulBlogPost1.nodes ) {
+    throw new Error("undefined posts")
   }
-
-  for (let author of siteMetadata.authors) {
-    if (author) {
-      createPage<AuthorPageContext>({
-        path: `/authors/${author.slug}/`,
-        component: path.resolve("src/templates/author.tsx"),
-        context: { author }
+  let blogPosts: BlogPosts = {}
+  for (let post of allContentfulBlogPost1.nodes) {
+    if (!blogPosts[post.contentful_id as string]) {
+      blogPosts[post.contentful_id as string] = {}
+    }
+    if (!post.contentful_id || !post.title) {
+      continue;
+    }
+    let locale: string
+    switch (post.node_locale) {
+      case "ja-JP":
+        locale = "ja"
+        break;
+      case "en-US":
+        locale = "en"
+        break;
+      default:
+        continue;
+    }
+    blogPosts[post.contentful_id as string][locale] = post
+  }
+  
+  for (let [key, post] of Object.entries(blogPosts)) {
+    if (post) {
+      createPage<BlogPostContext>({
+        path: `/blog/posts/${post.ja.contentful_id}/`,
+        component: path.resolve("src/templates/post.tsx"),
+        context: { post }
       })
     }
   }
+  createPage<BlogPostsContext>({
+    path: `/blog/posts/`,
+    component: path.resolve("src/templates/blog/posts/index.tsx"),
+    context: { blogPosts }
+  })
 }
