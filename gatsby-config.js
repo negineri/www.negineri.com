@@ -1,4 +1,5 @@
-const activeEnv = process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
+const activeEnv =
+  process.env.GATSBY_ACTIVE_ENV || process.env.NODE_ENV || "development"
 require("dotenv").config({
   path: `.env.${activeEnv}`,
 })
@@ -7,18 +8,18 @@ module.exports = {
   siteMetadata: {
     title: `Negi NOC`,
     authors: [
-      { name: 'Tori', slug: 'tori' },
-      { name: 'Neko', slug: 'neko' },
-      { name: 'Inu', slug: 'inu' }
-    ]
+      { name: "Tori", slug: "tori" },
+      { name: "Neko", slug: "neko" },
+      { name: "Inu", slug: "inu" },
+    ],
   },
   plugins: [
-    "gatsby-plugin-theme-ui",
+    `gatsby-plugin-theme-ui`,
     {
       resolve: `gatsby-plugin-graphql-codegen`,
       options: {
-        fileName: `types/graphql-types.d.ts`
-      }
+        fileName: `types/graphql-types.d.ts`,
+      },
     },
     `gatsby-plugin-react-helmet`,
     // Add typescript stack into webpack
@@ -26,9 +27,9 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: process.env.CONTENTFUL_SPACE_ID,
-        accessToken: process.env.CONTENTFUL_API_KEY
-      }
+        spaceId: process.env.GATSBY_CONTENTFUL_SPACE_ID,
+        accessToken: process.env.GATSBY_CONTENTFUL_API_KEY,
+      },
     },
     {
       resolve: `gatsby-plugin-intl`,
@@ -51,18 +52,15 @@ module.exports = {
       options: {
         plugins: [
           {
-            resolve: 'gatsby-remark-prismjs-title',
-            options: {
-            }
+            resolve: `gatsby-remark-prismjs-title`,
+            options: {},
           },
           {
             resolve: `gatsby-remark-prismjs`,
-            options: {
-
-            }
-          }
-        ]
-      }
-    }
+            options: {},
+          },
+        ],
+      },
+    },
   ],
 }

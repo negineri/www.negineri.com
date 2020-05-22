@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { jsx, Heading } from "theme-ui"
-import React from 'react'
+import React from "react"
 import messages from "./messages"
 import { useIntl } from "react-intl"
 import { Link } from "gatsby-plugin-intl"
@@ -10,7 +10,7 @@ import { ComponentsHomeIndexQuery } from "types/graphql-types"
 const Component: React.FC = () => {
   const data: ComponentsHomeIndexQuery = useStaticQuery(
     graphql`
-      query ComponentsHomeIndex{
+      query ComponentsHomeIndex {
         site {
           siteMetadata {
             title
@@ -21,17 +21,21 @@ const Component: React.FC = () => {
   )
   const intl = useIntl()
   const t = intl.formatMessage
-  return(
+  return (
     <div>
-      <Heading as='h1'>{data.site.siteMetadata.title}</Heading>
+      <Heading as="h1">{data.site.siteMetadata.title}</Heading>
       <p>{t(messages.description)}</p>
       <Heading>{t(messages.services)}</Heading>
       <ul>
-        <li><Link to="/minecraft/">Minecraft</Link></li>
+        <li>
+          <Link to="/minecraft/">Minecraft</Link>
+        </li>
       </ul>
       <Heading>{t(messages.blog)}</Heading>
       <ul>
-        <li><Link to="/blog/posts/">{t(messages.blogPosts)}</Link></li>
+        <li>
+          <Link to="/blog/posts/">{t(messages.blogPosts)}</Link>
+        </li>
       </ul>
     </div>
   )

@@ -45,7 +45,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --parser typescript --trailing-comma es5 --no-semi --single-quote --write \"src/**/*.ts*\"",
+    "format": "prettier --no-semi --write \"{src/**/*.{ts*,js*},*.{ts*,js*}}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "i18n": "npx extract-messages -l=en,ja -o src/intl --flat true 'src/**/*.ts'",
     "upgrade": "ncu -u"

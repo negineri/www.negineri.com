@@ -15,31 +15,35 @@ const Component: React.FC<Props> = ({ pageContext }) => {
   const t = intl.formatMessage
   let posts = []
   for (let [key, post] of Object.entries(pageContext.blogPosts)) {
-    if (!post[intl.locale]){
+    if (!post[intl.locale]) {
       continue
     }
     posts.push(
       <li>
         <Box>
-          <Heading sx={{fontSize: 3, margin: 0}}><Link to={'/blog/posts/'+key+'/'}>{post[intl.locale].title}</Link></Heading>
+          <Heading sx={{ fontSize: 3, margin: 0 }}>
+            <Link to={"/blog/posts/" + key + "/"}>
+              {post[intl.locale].title}
+            </Link>
+          </Heading>
           <Text>date:{post[intl.locale].createdAt}</Text>
         </Box>
       </li>
     )
   }
-  return(
+  return (
     <Layout>
       <Box
         sx={{
-          '& a': {
-            color: 'text'
-          }
+          "& a": {
+            color: "text",
+          },
         }}
       >
         <Heading>{t(messages.title)}</Heading>
         <ul
           sx={{
-            listStyleType: 'none',
+            listStyleType: "none",
             padding: 0,
             margin: 0,
           }}

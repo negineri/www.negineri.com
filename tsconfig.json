@@ -1,17 +1,17 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "noImplicitAny": true,
-        "module": "commonjs",
-        "target": "esnext",
-        "jsx": "react",
-        "lib": ["dom", "es2015", "es2017"],
-        "esModuleInterop": true,
-        "baseUrl": "."
-    },
-    "include": [
-        "./src/**/*",
-        "node_modules/babel-plugin-react-intl-auto/**/*.d.ts"
-    ]
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "esnext",
+    "jsx": "react",
+    "lib": ["dom", "es2015", "es2017"],
+    "esModuleInterop": true,
+    "baseUrl": "."
+  },
+  "include": [
+    "./src/**/*",
+    "node_modules/babel-plugin-react-intl-auto/**/*.d.ts"
+  ]
 }

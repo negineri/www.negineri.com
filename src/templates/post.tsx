@@ -10,8 +10,8 @@ type Props = {
 
 const Component: React.FC<Props> = ({ pageContext }) => {
   const intl = useIntl()
-  if (!pageContext.post[intl.locale]){
-    return(
+  if (!pageContext.post[intl.locale]) {
+    return (
       <Layout>
         <Box>
           <Heading>Untranslated</Heading>
@@ -19,11 +19,16 @@ const Component: React.FC<Props> = ({ pageContext }) => {
       </Layout>
     )
   }
-  return(
+  return (
     <Layout>
       <Box>
         <Heading>{pageContext.post[intl.locale].title}</Heading>
-        <div dangerouslySetInnerHTML={{__html: pageContext.post[intl.locale].body.childMarkdownRemark.html as string }} />
+        <div
+          dangerouslySetInnerHTML={{
+            __html: pageContext.post[intl.locale].body.childMarkdownRemark
+              .html as string,
+          }}
+        />
       </Box>
     </Layout>
   )

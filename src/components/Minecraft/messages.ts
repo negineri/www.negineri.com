@@ -1,6 +1,6 @@
-import { defineMessages } from 'react-intl'
+import { defineMessages } from "react-intl"
 
 export default defineMessages({
   title: "Negi Server (Minecraft)",
-  description: "This is disordered world."
+  description: "This is disordered world.",
 })

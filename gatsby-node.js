@@ -1,8 +1,8 @@
-'use strict'
-require('ts-node').register({
+"use strict"
+require("ts-node").register({
   compilerOptions: {
-    module: 'commonjs',
-    target: 'esnext',
+    module: "commonjs",
+    target: "esnext",
   },
 })
-exports.createPages = require('./gatsby-node/index').createPages
+exports.createPages = require("./gatsby-node/index").createPages

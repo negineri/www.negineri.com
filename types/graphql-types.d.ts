@@ -2143,10 +2143,10 @@ export type Query = {
   allSite: SiteConnection;
   markdownRemark?: Maybe<MarkdownRemark>;
   allMarkdownRemark: MarkdownRemarkConnection;
-  contentfulBlogPost1BodyTextNode?: Maybe<ContentfulBlogPost1BodyTextNode>;
-  allContentfulBlogPost1BodyTextNode: ContentfulBlogPost1BodyTextNodeConnection;
   contentfulAsset?: Maybe<ContentfulAsset>;
   allContentfulAsset: ContentfulAssetConnection;
+  contentfulBlogPost1BodyTextNode?: Maybe<ContentfulBlogPost1BodyTextNode>;
+  allContentfulBlogPost1BodyTextNode: ContentfulBlogPost1BodyTextNodeConnection;
   contentfulBlogPost1?: Maybe<ContentfulBlogPost1>;
   allContentfulBlogPost1: ContentfulBlogPost1Connection;
   contentfulContentType?: Maybe<ContentfulContentType>;
@@ -2281,8 +2281,6 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<IntQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2326,24 +2324,6 @@ export type QueryAllMarkdownRemarkArgs = {
 };
 
 
-export type QueryContentfulBlogPost1BodyTextNodeArgs = {
-  id?: Maybe<StringQueryOperatorInput>;
-  parent?: Maybe<NodeFilterInput>;
-  children?: Maybe<NodeFilterListInput>;
-  internal?: Maybe<InternalFilterInput>;
-  body?: Maybe<StringQueryOperatorInput>;
-  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
-};
-
-
-export type QueryAllContentfulBlogPost1BodyTextNodeArgs = {
-  filter?: Maybe<ContentfulBlogPost1BodyTextNodeFilterInput>;
-  sort?: Maybe<ContentfulBlogPost1BodyTextNodeSortInput>;
-  skip?: Maybe<Scalars['Int']>;
-  limit?: Maybe<Scalars['Int']>;
-};
-
-
 export type QueryContentfulAssetArgs = {
   id?: Maybe<StringQueryOperatorInput>;
   parent?: Maybe<NodeFilterInput>;
@@ -2365,6 +2345,24 @@ export type QueryContentfulAssetArgs = {
 export type QueryAllContentfulAssetArgs = {
   filter?: Maybe<ContentfulAssetFilterInput>;
   sort?: Maybe<ContentfulAssetSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulBlogPost1BodyTextNodeArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  body?: Maybe<StringQueryOperatorInput>;
+  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+};
+
+
+export type QueryAllContentfulBlogPost1BodyTextNodeArgs = {
+  filter?: Maybe<ContentfulBlogPost1BodyTextNodeFilterInput>;
+  sort?: Maybe<ContentfulBlogPost1BodyTextNodeSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -2459,8 +2457,6 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
-  port?: Maybe<Scalars['Int']>;
-  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -2664,8 +2660,6 @@ export type SiteFieldsEnum =
   'siteMetadata___authors' |
   'siteMetadata___authors___name' |
   'siteMetadata___authors___slug' |
-  'port' |
-  'host' |
   'polyfill' |
   'pathPrefix' |
   'id' |
@@ -2758,8 +2752,6 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
-  port?: Maybe<IntQueryOperatorInput>;
-  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2823,10 +2815,10 @@ export type SitePageContext = {
 };
 
 export type SitePageContextBlogPosts = {
-  _64XDT2hjdHGIGY5PoG3iP?: Maybe<SitePageContextBlogPosts_64Xdt2hjdHgigy5PoG3iP>;
+  JDRhIXJSIowkvvC69T5aD?: Maybe<SitePageContextBlogPostsJdRhIxjsIowkvvC69T5aD>;
   _38gxn8P23T7Y8S9Pz1FSXm?: Maybe<SitePageContextBlogPosts_38gxn8P23T7Y8S9Pz1FsXm>;
   _3g76xvOUM1h1HHJapNSc8t?: Maybe<SitePageContextBlogPosts_3g76xvOum1h1HhJapNSc8t>;
-  JDRhIXJSIowkvvC69T5aD?: Maybe<SitePageContextBlogPostsJdRhIxjsIowkvvC69T5aD>;
+  _64XDT2hjdHGIGY5PoG3iP?: Maybe<SitePageContextBlogPosts_64Xdt2hjdHgigy5PoG3iP>;
 };
 
 export type SitePageContextBlogPosts_38gxn8P23T7Y8S9Pz1FsXm = {
@@ -2956,10 +2948,10 @@ export type SitePageContextBlogPosts_64Xdt2hjdHgigy5PoG3iPJaFilterInput = {
 };
 
 export type SitePageContextBlogPostsFilterInput = {
-  _64XDT2hjdHGIGY5PoG3iP?: Maybe<SitePageContextBlogPosts_64Xdt2hjdHgigy5PoG3iPFilterInput>;
+  JDRhIXJSIowkvvC69T5aD?: Maybe<SitePageContextBlogPostsJdRhIxjsIowkvvC69T5aDFilterInput>;
   _38gxn8P23T7Y8S9Pz1FSXm?: Maybe<SitePageContextBlogPosts_38gxn8P23T7Y8S9Pz1FsXmFilterInput>;
   _3g76xvOUM1h1HHJapNSc8t?: Maybe<SitePageContextBlogPosts_3g76xvOum1h1HhJapNSc8tFilterInput>;
-  JDRhIXJSIowkvvC69T5aD?: Maybe<SitePageContextBlogPostsJdRhIxjsIowkvvC69T5aDFilterInput>;
+  _64XDT2hjdHGIGY5PoG3iP?: Maybe<SitePageContextBlogPosts_64Xdt2hjdHgigy5PoG3iPFilterInput>;
 };
 
 export type SitePageContextBlogPostsJdRhIxjsIowkvvC69T5aD = {
