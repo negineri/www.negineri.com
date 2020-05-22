@@ -5,21 +5,21 @@
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
     "@theme-ui/presets": "^0.3.0",
-    "@types/node": "^14.0.1",
+    "@types/node": "^14.0.5",
     "@types/react-helmet": "^6.0.0",
     "@types/theme-ui": "^0.3.2",
     "focus-visible": "^5.1.0",
-    "gatsby": "^2.21.33",
-    "gatsby-link": "^2.4.2",
+    "gatsby": "^2.22.6",
+    "gatsby-link": "^2.4.3",
     "gatsby-plugin-graphql-codegen": "^2.7.1",
     "gatsby-plugin-intl": "^0.3.3",
-    "gatsby-plugin-react-helmet": "^3.3.1",
+    "gatsby-plugin-react-helmet": "^3.3.2",
     "gatsby-plugin-theme-ui": "^0.3.0",
-    "gatsby-plugin-typescript": "^2.4.2",
-    "gatsby-remark-prismjs": "^3.5.1",
+    "gatsby-plugin-typescript": "^2.4.3",
+    "gatsby-remark-prismjs": "^3.5.2",
     "gatsby-remark-prismjs-title": "^1.0.0",
-    "gatsby-source-contentful": "^2.3.5",
-    "gatsby-transformer-remark": "^2.8.8",
+    "gatsby-source-contentful": "^2.3.11",
+    "gatsby-transformer-remark": "^2.8.12",
     "prismjs": "^1.20.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
@@ -28,7 +28,7 @@
     "theme-ui": "^0.3.1",
     "ts-node": "^8.10.1",
     "typeface-roboto": "0.0.75",
-    "typescript": "^3.9.2"
+    "typescript": "^3.9.3"
   },
   "keywords": [
     "gatsby, typescript"
@@ -45,7 +45,7 @@
   },
   "devDependencies": {
     "babel-plugin-react-intl-auto": "^3.3.0",
-    "babel-preset-gatsby": "^0.4.2",
+    "babel-preset-gatsby": "^0.4.6",
     "extract-react-intl-messages": "^4.1.1",
     "gatsby-plugin-root-import": "^2.0.5",
     "prettier": "^2.0.5"
