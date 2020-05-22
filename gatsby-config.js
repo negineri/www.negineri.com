@@ -44,7 +44,6 @@ module.exports = {
         redirect: true,
       },
     },
-    `gatsby-plugin-emotion`,
     `gatsby-plugin-root-import`,
     `gatsby-plugin-react-helmet`,
     {
