@@ -38,7 +38,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
-    "format": "prettier --no-semi --write \"{src/**/*.{ts*,js*},*.{ts*,js*}}\"",
+    "format": "prettier --write \"{src/**/*.{ts*,js*},*.{ts*,js*},gatsby-node/**/*.ts*}\"",
     "test": "echo \"Error: no test specified\" && exit 1",
     "i18n": "npx extract-messages -l=en,ja -o src/intl --flat true 'src/**/*.ts'",
     "upgrade": "ncu -u"

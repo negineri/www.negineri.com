@@ -16,9 +16,7 @@ const Component: React.FC = () => {
       <Heading>Version</Heading>
       <Text>PaperMC 1.15.2</Text>
       <Heading>Plugins</Heading>
-      <ul>
-        <li></li>
-      </ul>
+      <Link to="/minecraft/plugins/">List</Link>
       <Heading>Address</Heading>
       <Flex>
         <Text>IP Address:</Text>

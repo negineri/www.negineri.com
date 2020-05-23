@@ -1116,6 +1116,907 @@ export type ContentfulImageFormat =
   'PNG' |
   'WEBP';
 
+export type ContentfulMinecraftPlugin = Node & {
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  description?: Maybe<ContentfulMinecraftPluginDescriptionTextNode>;
+  body?: Maybe<ContentfulMinecraftPluginBodyTextNode>;
+  spaceId?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
+  createdAt?: Maybe<Scalars['Date']>;
+  updatedAt?: Maybe<Scalars['Date']>;
+  sys?: Maybe<ContentfulMinecraftPluginSys>;
+  node_locale?: Maybe<Scalars['String']>;
+  childContentfulMinecraftPluginDescriptionTextNode?: Maybe<ContentfulMinecraftPluginDescriptionTextNode>;
+  childContentfulMinecraftPluginBodyTextNode?: Maybe<ContentfulMinecraftPluginBodyTextNode>;
+};
+
+
+export type ContentfulMinecraftPluginCreatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type ContentfulMinecraftPluginUpdatedAtArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMinecraftPluginBodyTextNode = Node & {
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  body?: Maybe<Scalars['String']>;
+  childMarkdownRemark?: Maybe<MarkdownRemark>;
+};
+
+export type ContentfulMinecraftPluginBodyTextNodeConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMinecraftPluginBodyTextNodeEdge>;
+  nodes: Array<ContentfulMinecraftPluginBodyTextNode>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulMinecraftPluginBodyTextNodeGroupConnection>;
+};
+
+
+export type ContentfulMinecraftPluginBodyTextNodeConnectionDistinctArgs = {
+  field: ContentfulMinecraftPluginBodyTextNodeFieldsEnum;
+};
+
+
+export type ContentfulMinecraftPluginBodyTextNodeConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulMinecraftPluginBodyTextNodeFieldsEnum;
+};
+
+export type ContentfulMinecraftPluginBodyTextNodeEdge = {
+  next?: Maybe<ContentfulMinecraftPluginBodyTextNode>;
+  node: ContentfulMinecraftPluginBodyTextNode;
+  previous?: Maybe<ContentfulMinecraftPluginBodyTextNode>;
+};
+
+export type ContentfulMinecraftPluginBodyTextNodeFieldsEnum = 
+  'id' |
+  'parent___id' |
+  'parent___parent___id' |
+  'parent___parent___parent___id' |
+  'parent___parent___parent___children' |
+  'parent___parent___children' |
+  'parent___parent___children___id' |
+  'parent___parent___children___children' |
+  'parent___parent___internal___content' |
+  'parent___parent___internal___contentDigest' |
+  'parent___parent___internal___description' |
+  'parent___parent___internal___fieldOwners' |
+  'parent___parent___internal___ignoreType' |
+  'parent___parent___internal___mediaType' |
+  'parent___parent___internal___owner' |
+  'parent___parent___internal___type' |
+  'parent___children' |
+  'parent___children___id' |
+  'parent___children___parent___id' |
+  'parent___children___parent___children' |
+  'parent___children___children' |
+  'parent___children___children___id' |
+  'parent___children___children___children' |
+  'parent___children___internal___content' |
+  'parent___children___internal___contentDigest' |
+  'parent___children___internal___description' |
+  'parent___children___internal___fieldOwners' |
+  'parent___children___internal___ignoreType' |
+  'parent___children___internal___mediaType' |
+  'parent___children___internal___owner' |
+  'parent___children___internal___type' |
+  'parent___internal___content' |
+  'parent___internal___contentDigest' |
+  'parent___internal___description' |
+  'parent___internal___fieldOwners' |
+  'parent___internal___ignoreType' |
+  'parent___internal___mediaType' |
+  'parent___internal___owner' |
+  'parent___internal___type' |
+  'children' |
+  'children___id' |
+  'children___parent___id' |
+  'children___parent___parent___id' |
+  'children___parent___parent___children' |
+  'children___parent___children' |
+  'children___parent___children___id' |
+  'children___parent___children___children' |
+  'children___parent___internal___content' |
+  'children___parent___internal___contentDigest' |
+  'children___parent___internal___description' |
+  'children___parent___internal___fieldOwners' |
+  'children___parent___internal___ignoreType' |
+  'children___parent___internal___mediaType' |
+  'children___parent___internal___owner' |
+  'children___parent___internal___type' |
+  'children___children' |
+  'children___children___id' |
+  'children___children___parent___id' |
+  'children___children___parent___children' |
+  'children___children___children' |
+  'children___children___children___id' |
+  'children___children___children___children' |
+  'children___children___internal___content' |
+  'children___children___internal___contentDigest' |
+  'children___children___internal___description' |
+  'children___children___internal___fieldOwners' |
+  'children___children___internal___ignoreType' |
+  'children___children___internal___mediaType' |
+  'children___children___internal___owner' |
+  'children___children___internal___type' |
+  'children___internal___content' |
+  'children___internal___contentDigest' |
+  'children___internal___description' |
+  'children___internal___fieldOwners' |
+  'children___internal___ignoreType' |
+  'children___internal___mediaType' |
+  'children___internal___owner' |
+  'children___internal___type' |
+  'internal___content' |
+  'internal___contentDigest' |
+  'internal___description' |
+  'internal___fieldOwners' |
+  'internal___ignoreType' |
+  'internal___mediaType' |
+  'internal___owner' |
+  'internal___type' |
+  'body' |
+  'childMarkdownRemark___id' |
+  'childMarkdownRemark___frontmatter___title' |
+  'childMarkdownRemark___excerpt' |
+  'childMarkdownRemark___rawMarkdownBody' |
+  'childMarkdownRemark___html' |
+  'childMarkdownRemark___htmlAst' |
+  'childMarkdownRemark___excerptAst' |
+  'childMarkdownRemark___headings' |
+  'childMarkdownRemark___headings___id' |
+  'childMarkdownRemark___headings___value' |
+  'childMarkdownRemark___headings___depth' |
+  'childMarkdownRemark___timeToRead' |
+  'childMarkdownRemark___tableOfContents' |
+  'childMarkdownRemark___wordCount___paragraphs' |
+  'childMarkdownRemark___wordCount___sentences' |
+  'childMarkdownRemark___wordCount___words' |
+  'childMarkdownRemark___parent___id' |
+  'childMarkdownRemark___parent___parent___id' |
+  'childMarkdownRemark___parent___parent___children' |
+  'childMarkdownRemark___parent___children' |
+  'childMarkdownRemark___parent___children___id' |
+  'childMarkdownRemark___parent___children___children' |
+  'childMarkdownRemark___parent___internal___content' |
+  'childMarkdownRemark___parent___internal___contentDigest' |
+  'childMarkdownRemark___parent___internal___description' |
+  'childMarkdownRemark___parent___internal___fieldOwners' |
+  'childMarkdownRemark___parent___internal___ignoreType' |
+  'childMarkdownRemark___parent___internal___mediaType' |
+  'childMarkdownRemark___parent___internal___owner' |
+  'childMarkdownRemark___parent___internal___type' |
+  'childMarkdownRemark___children' |
+  'childMarkdownRemark___children___id' |
+  'childMarkdownRemark___children___parent___id' |
+  'childMarkdownRemark___children___parent___children' |
+  'childMarkdownRemark___children___children' |
+  'childMarkdownRemark___children___children___id' |
+  'childMarkdownRemark___children___children___children' |
+  'childMarkdownRemark___children___internal___content' |
+  'childMarkdownRemark___children___internal___contentDigest' |
+  'childMarkdownRemark___children___internal___description' |
+  'childMarkdownRemark___children___internal___fieldOwners' |
+  'childMarkdownRemark___children___internal___ignoreType' |
+  'childMarkdownRemark___children___internal___mediaType' |
+  'childMarkdownRemark___children___internal___owner' |
+  'childMarkdownRemark___children___internal___type' |
+  'childMarkdownRemark___internal___content' |
+  'childMarkdownRemark___internal___contentDigest' |
+  'childMarkdownRemark___internal___description' |
+  'childMarkdownRemark___internal___fieldOwners' |
+  'childMarkdownRemark___internal___ignoreType' |
+  'childMarkdownRemark___internal___mediaType' |
+  'childMarkdownRemark___internal___owner' |
+  'childMarkdownRemark___internal___type';
+
+export type ContentfulMinecraftPluginBodyTextNodeFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  body?: Maybe<StringQueryOperatorInput>;
+  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+};
+
+export type ContentfulMinecraftPluginBodyTextNodeGroupConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMinecraftPluginBodyTextNodeEdge>;
+  nodes: Array<ContentfulMinecraftPluginBodyTextNode>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMinecraftPluginBodyTextNodeSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulMinecraftPluginBodyTextNodeFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulMinecraftPluginConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMinecraftPluginEdge>;
+  nodes: Array<ContentfulMinecraftPlugin>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulMinecraftPluginGroupConnection>;
+};
+
+
+export type ContentfulMinecraftPluginConnectionDistinctArgs = {
+  field: ContentfulMinecraftPluginFieldsEnum;
+};
+
+
+export type ContentfulMinecraftPluginConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulMinecraftPluginFieldsEnum;
+};
+
+export type ContentfulMinecraftPluginDescriptionTextNode = Node & {
+  id: Scalars['ID'];
+  parent?: Maybe<Node>;
+  children: Array<Node>;
+  internal: Internal;
+  description?: Maybe<Scalars['String']>;
+  childMarkdownRemark?: Maybe<MarkdownRemark>;
+};
+
+export type ContentfulMinecraftPluginDescriptionTextNodeConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMinecraftPluginDescriptionTextNodeEdge>;
+  nodes: Array<ContentfulMinecraftPluginDescriptionTextNode>;
+  pageInfo: PageInfo;
+  distinct: Array<Scalars['String']>;
+  group: Array<ContentfulMinecraftPluginDescriptionTextNodeGroupConnection>;
+};
+
+
+export type ContentfulMinecraftPluginDescriptionTextNodeConnectionDistinctArgs = {
+  field: ContentfulMinecraftPluginDescriptionTextNodeFieldsEnum;
+};
+
+
+export type ContentfulMinecraftPluginDescriptionTextNodeConnectionGroupArgs = {
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+  field: ContentfulMinecraftPluginDescriptionTextNodeFieldsEnum;
+};
+
+export type ContentfulMinecraftPluginDescriptionTextNodeEdge = {
+  next?: Maybe<ContentfulMinecraftPluginDescriptionTextNode>;
+  node: ContentfulMinecraftPluginDescriptionTextNode;
+  previous?: Maybe<ContentfulMinecraftPluginDescriptionTextNode>;
+};
+
+export type ContentfulMinecraftPluginDescriptionTextNodeFieldsEnum = 
+  'id' |
+  'parent___id' |
+  'parent___parent___id' |
+  'parent___parent___parent___id' |
+  'parent___parent___parent___children' |
+  'parent___parent___children' |
+  'parent___parent___children___id' |
+  'parent___parent___children___children' |
+  'parent___parent___internal___content' |
+  'parent___parent___internal___contentDigest' |
+  'parent___parent___internal___description' |
+  'parent___parent___internal___fieldOwners' |
+  'parent___parent___internal___ignoreType' |
+  'parent___parent___internal___mediaType' |
+  'parent___parent___internal___owner' |
+  'parent___parent___internal___type' |
+  'parent___children' |
+  'parent___children___id' |
+  'parent___children___parent___id' |
+  'parent___children___parent___children' |
+  'parent___children___children' |
+  'parent___children___children___id' |
+  'parent___children___children___children' |
+  'parent___children___internal___content' |
+  'parent___children___internal___contentDigest' |
+  'parent___children___internal___description' |
+  'parent___children___internal___fieldOwners' |
+  'parent___children___internal___ignoreType' |
+  'parent___children___internal___mediaType' |
+  'parent___children___internal___owner' |
+  'parent___children___internal___type' |
+  'parent___internal___content' |
+  'parent___internal___contentDigest' |
+  'parent___internal___description' |
+  'parent___internal___fieldOwners' |
+  'parent___internal___ignoreType' |
+  'parent___internal___mediaType' |
+  'parent___internal___owner' |
+  'parent___internal___type' |
+  'children' |
+  'children___id' |
+  'children___parent___id' |
+  'children___parent___parent___id' |
+  'children___parent___parent___children' |
+  'children___parent___children' |
+  'children___parent___children___id' |
+  'children___parent___children___children' |
+  'children___parent___internal___content' |
+  'children___parent___internal___contentDigest' |
+  'children___parent___internal___description' |
+  'children___parent___internal___fieldOwners' |
+  'children___parent___internal___ignoreType' |
+  'children___parent___internal___mediaType' |
+  'children___parent___internal___owner' |
+  'children___parent___internal___type' |
+  'children___children' |
+  'children___children___id' |
+  'children___children___parent___id' |
+  'children___children___parent___children' |
+  'children___children___children' |
+  'children___children___children___id' |
+  'children___children___children___children' |
+  'children___children___internal___content' |
+  'children___children___internal___contentDigest' |
+  'children___children___internal___description' |
+  'children___children___internal___fieldOwners' |
+  'children___children___internal___ignoreType' |
+  'children___children___internal___mediaType' |
+  'children___children___internal___owner' |
+  'children___children___internal___type' |
+  'children___internal___content' |
+  'children___internal___contentDigest' |
+  'children___internal___description' |
+  'children___internal___fieldOwners' |
+  'children___internal___ignoreType' |
+  'children___internal___mediaType' |
+  'children___internal___owner' |
+  'children___internal___type' |
+  'internal___content' |
+  'internal___contentDigest' |
+  'internal___description' |
+  'internal___fieldOwners' |
+  'internal___ignoreType' |
+  'internal___mediaType' |
+  'internal___owner' |
+  'internal___type' |
+  'description' |
+  'childMarkdownRemark___id' |
+  'childMarkdownRemark___frontmatter___title' |
+  'childMarkdownRemark___excerpt' |
+  'childMarkdownRemark___rawMarkdownBody' |
+  'childMarkdownRemark___html' |
+  'childMarkdownRemark___htmlAst' |
+  'childMarkdownRemark___excerptAst' |
+  'childMarkdownRemark___headings' |
+  'childMarkdownRemark___headings___id' |
+  'childMarkdownRemark___headings___value' |
+  'childMarkdownRemark___headings___depth' |
+  'childMarkdownRemark___timeToRead' |
+  'childMarkdownRemark___tableOfContents' |
+  'childMarkdownRemark___wordCount___paragraphs' |
+  'childMarkdownRemark___wordCount___sentences' |
+  'childMarkdownRemark___wordCount___words' |
+  'childMarkdownRemark___parent___id' |
+  'childMarkdownRemark___parent___parent___id' |
+  'childMarkdownRemark___parent___parent___children' |
+  'childMarkdownRemark___parent___children' |
+  'childMarkdownRemark___parent___children___id' |
+  'childMarkdownRemark___parent___children___children' |
+  'childMarkdownRemark___parent___internal___content' |
+  'childMarkdownRemark___parent___internal___contentDigest' |
+  'childMarkdownRemark___parent___internal___description' |
+  'childMarkdownRemark___parent___internal___fieldOwners' |
+  'childMarkdownRemark___parent___internal___ignoreType' |
+  'childMarkdownRemark___parent___internal___mediaType' |
+  'childMarkdownRemark___parent___internal___owner' |
+  'childMarkdownRemark___parent___internal___type' |
+  'childMarkdownRemark___children' |
+  'childMarkdownRemark___children___id' |
+  'childMarkdownRemark___children___parent___id' |
+  'childMarkdownRemark___children___parent___children' |
+  'childMarkdownRemark___children___children' |
+  'childMarkdownRemark___children___children___id' |
+  'childMarkdownRemark___children___children___children' |
+  'childMarkdownRemark___children___internal___content' |
+  'childMarkdownRemark___children___internal___contentDigest' |
+  'childMarkdownRemark___children___internal___description' |
+  'childMarkdownRemark___children___internal___fieldOwners' |
+  'childMarkdownRemark___children___internal___ignoreType' |
+  'childMarkdownRemark___children___internal___mediaType' |
+  'childMarkdownRemark___children___internal___owner' |
+  'childMarkdownRemark___children___internal___type' |
+  'childMarkdownRemark___internal___content' |
+  'childMarkdownRemark___internal___contentDigest' |
+  'childMarkdownRemark___internal___description' |
+  'childMarkdownRemark___internal___fieldOwners' |
+  'childMarkdownRemark___internal___ignoreType' |
+  'childMarkdownRemark___internal___mediaType' |
+  'childMarkdownRemark___internal___owner' |
+  'childMarkdownRemark___internal___type';
+
+export type ContentfulMinecraftPluginDescriptionTextNodeFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+};
+
+export type ContentfulMinecraftPluginDescriptionTextNodeGroupConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMinecraftPluginDescriptionTextNodeEdge>;
+  nodes: Array<ContentfulMinecraftPluginDescriptionTextNode>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMinecraftPluginDescriptionTextNodeSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulMinecraftPluginDescriptionTextNodeFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulMinecraftPluginEdge = {
+  next?: Maybe<ContentfulMinecraftPlugin>;
+  node: ContentfulMinecraftPlugin;
+  previous?: Maybe<ContentfulMinecraftPlugin>;
+};
+
+export type ContentfulMinecraftPluginFieldsEnum = 
+  'id' |
+  'parent___id' |
+  'parent___parent___id' |
+  'parent___parent___parent___id' |
+  'parent___parent___parent___children' |
+  'parent___parent___children' |
+  'parent___parent___children___id' |
+  'parent___parent___children___children' |
+  'parent___parent___internal___content' |
+  'parent___parent___internal___contentDigest' |
+  'parent___parent___internal___description' |
+  'parent___parent___internal___fieldOwners' |
+  'parent___parent___internal___ignoreType' |
+  'parent___parent___internal___mediaType' |
+  'parent___parent___internal___owner' |
+  'parent___parent___internal___type' |
+  'parent___children' |
+  'parent___children___id' |
+  'parent___children___parent___id' |
+  'parent___children___parent___children' |
+  'parent___children___children' |
+  'parent___children___children___id' |
+  'parent___children___children___children' |
+  'parent___children___internal___content' |
+  'parent___children___internal___contentDigest' |
+  'parent___children___internal___description' |
+  'parent___children___internal___fieldOwners' |
+  'parent___children___internal___ignoreType' |
+  'parent___children___internal___mediaType' |
+  'parent___children___internal___owner' |
+  'parent___children___internal___type' |
+  'parent___internal___content' |
+  'parent___internal___contentDigest' |
+  'parent___internal___description' |
+  'parent___internal___fieldOwners' |
+  'parent___internal___ignoreType' |
+  'parent___internal___mediaType' |
+  'parent___internal___owner' |
+  'parent___internal___type' |
+  'children' |
+  'children___id' |
+  'children___parent___id' |
+  'children___parent___parent___id' |
+  'children___parent___parent___children' |
+  'children___parent___children' |
+  'children___parent___children___id' |
+  'children___parent___children___children' |
+  'children___parent___internal___content' |
+  'children___parent___internal___contentDigest' |
+  'children___parent___internal___description' |
+  'children___parent___internal___fieldOwners' |
+  'children___parent___internal___ignoreType' |
+  'children___parent___internal___mediaType' |
+  'children___parent___internal___owner' |
+  'children___parent___internal___type' |
+  'children___children' |
+  'children___children___id' |
+  'children___children___parent___id' |
+  'children___children___parent___children' |
+  'children___children___children' |
+  'children___children___children___id' |
+  'children___children___children___children' |
+  'children___children___internal___content' |
+  'children___children___internal___contentDigest' |
+  'children___children___internal___description' |
+  'children___children___internal___fieldOwners' |
+  'children___children___internal___ignoreType' |
+  'children___children___internal___mediaType' |
+  'children___children___internal___owner' |
+  'children___children___internal___type' |
+  'children___internal___content' |
+  'children___internal___contentDigest' |
+  'children___internal___description' |
+  'children___internal___fieldOwners' |
+  'children___internal___ignoreType' |
+  'children___internal___mediaType' |
+  'children___internal___owner' |
+  'children___internal___type' |
+  'internal___content' |
+  'internal___contentDigest' |
+  'internal___description' |
+  'internal___fieldOwners' |
+  'internal___ignoreType' |
+  'internal___mediaType' |
+  'internal___owner' |
+  'internal___type' |
+  'title' |
+  'slug' |
+  'description___id' |
+  'description___parent___id' |
+  'description___parent___parent___id' |
+  'description___parent___parent___children' |
+  'description___parent___children' |
+  'description___parent___children___id' |
+  'description___parent___children___children' |
+  'description___parent___internal___content' |
+  'description___parent___internal___contentDigest' |
+  'description___parent___internal___description' |
+  'description___parent___internal___fieldOwners' |
+  'description___parent___internal___ignoreType' |
+  'description___parent___internal___mediaType' |
+  'description___parent___internal___owner' |
+  'description___parent___internal___type' |
+  'description___children' |
+  'description___children___id' |
+  'description___children___parent___id' |
+  'description___children___parent___children' |
+  'description___children___children' |
+  'description___children___children___id' |
+  'description___children___children___children' |
+  'description___children___internal___content' |
+  'description___children___internal___contentDigest' |
+  'description___children___internal___description' |
+  'description___children___internal___fieldOwners' |
+  'description___children___internal___ignoreType' |
+  'description___children___internal___mediaType' |
+  'description___children___internal___owner' |
+  'description___children___internal___type' |
+  'description___internal___content' |
+  'description___internal___contentDigest' |
+  'description___internal___description' |
+  'description___internal___fieldOwners' |
+  'description___internal___ignoreType' |
+  'description___internal___mediaType' |
+  'description___internal___owner' |
+  'description___internal___type' |
+  'description___description' |
+  'description___childMarkdownRemark___id' |
+  'description___childMarkdownRemark___frontmatter___title' |
+  'description___childMarkdownRemark___excerpt' |
+  'description___childMarkdownRemark___rawMarkdownBody' |
+  'description___childMarkdownRemark___html' |
+  'description___childMarkdownRemark___htmlAst' |
+  'description___childMarkdownRemark___excerptAst' |
+  'description___childMarkdownRemark___headings' |
+  'description___childMarkdownRemark___headings___id' |
+  'description___childMarkdownRemark___headings___value' |
+  'description___childMarkdownRemark___headings___depth' |
+  'description___childMarkdownRemark___timeToRead' |
+  'description___childMarkdownRemark___tableOfContents' |
+  'description___childMarkdownRemark___wordCount___paragraphs' |
+  'description___childMarkdownRemark___wordCount___sentences' |
+  'description___childMarkdownRemark___wordCount___words' |
+  'description___childMarkdownRemark___parent___id' |
+  'description___childMarkdownRemark___parent___children' |
+  'description___childMarkdownRemark___children' |
+  'description___childMarkdownRemark___children___id' |
+  'description___childMarkdownRemark___children___children' |
+  'description___childMarkdownRemark___internal___content' |
+  'description___childMarkdownRemark___internal___contentDigest' |
+  'description___childMarkdownRemark___internal___description' |
+  'description___childMarkdownRemark___internal___fieldOwners' |
+  'description___childMarkdownRemark___internal___ignoreType' |
+  'description___childMarkdownRemark___internal___mediaType' |
+  'description___childMarkdownRemark___internal___owner' |
+  'description___childMarkdownRemark___internal___type' |
+  'body___id' |
+  'body___parent___id' |
+  'body___parent___parent___id' |
+  'body___parent___parent___children' |
+  'body___parent___children' |
+  'body___parent___children___id' |
+  'body___parent___children___children' |
+  'body___parent___internal___content' |
+  'body___parent___internal___contentDigest' |
+  'body___parent___internal___description' |
+  'body___parent___internal___fieldOwners' |
+  'body___parent___internal___ignoreType' |
+  'body___parent___internal___mediaType' |
+  'body___parent___internal___owner' |
+  'body___parent___internal___type' |
+  'body___children' |
+  'body___children___id' |
+  'body___children___parent___id' |
+  'body___children___parent___children' |
+  'body___children___children' |
+  'body___children___children___id' |
+  'body___children___children___children' |
+  'body___children___internal___content' |
+  'body___children___internal___contentDigest' |
+  'body___children___internal___description' |
+  'body___children___internal___fieldOwners' |
+  'body___children___internal___ignoreType' |
+  'body___children___internal___mediaType' |
+  'body___children___internal___owner' |
+  'body___children___internal___type' |
+  'body___internal___content' |
+  'body___internal___contentDigest' |
+  'body___internal___description' |
+  'body___internal___fieldOwners' |
+  'body___internal___ignoreType' |
+  'body___internal___mediaType' |
+  'body___internal___owner' |
+  'body___internal___type' |
+  'body___body' |
+  'body___childMarkdownRemark___id' |
+  'body___childMarkdownRemark___frontmatter___title' |
+  'body___childMarkdownRemark___excerpt' |
+  'body___childMarkdownRemark___rawMarkdownBody' |
+  'body___childMarkdownRemark___html' |
+  'body___childMarkdownRemark___htmlAst' |
+  'body___childMarkdownRemark___excerptAst' |
+  'body___childMarkdownRemark___headings' |
+  'body___childMarkdownRemark___headings___id' |
+  'body___childMarkdownRemark___headings___value' |
+  'body___childMarkdownRemark___headings___depth' |
+  'body___childMarkdownRemark___timeToRead' |
+  'body___childMarkdownRemark___tableOfContents' |
+  'body___childMarkdownRemark___wordCount___paragraphs' |
+  'body___childMarkdownRemark___wordCount___sentences' |
+  'body___childMarkdownRemark___wordCount___words' |
+  'body___childMarkdownRemark___parent___id' |
+  'body___childMarkdownRemark___parent___children' |
+  'body___childMarkdownRemark___children' |
+  'body___childMarkdownRemark___children___id' |
+  'body___childMarkdownRemark___children___children' |
+  'body___childMarkdownRemark___internal___content' |
+  'body___childMarkdownRemark___internal___contentDigest' |
+  'body___childMarkdownRemark___internal___description' |
+  'body___childMarkdownRemark___internal___fieldOwners' |
+  'body___childMarkdownRemark___internal___ignoreType' |
+  'body___childMarkdownRemark___internal___mediaType' |
+  'body___childMarkdownRemark___internal___owner' |
+  'body___childMarkdownRemark___internal___type' |
+  'spaceId' |
+  'contentful_id' |
+  'createdAt' |
+  'updatedAt' |
+  'sys___revision' |
+  'sys___contentType___sys___type' |
+  'sys___contentType___sys___linkType' |
+  'sys___contentType___sys___id' |
+  'sys___contentType___sys___contentful_id' |
+  'node_locale' |
+  'childContentfulMinecraftPluginDescriptionTextNode___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___parent___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___parent___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___children___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___children___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___internal___content' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___internal___contentDigest' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___internal___description' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___internal___fieldOwners' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___internal___ignoreType' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___internal___mediaType' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___internal___owner' |
+  'childContentfulMinecraftPluginDescriptionTextNode___parent___internal___type' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___parent___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___parent___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___children___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___children___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___internal___content' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___internal___contentDigest' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___internal___description' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___internal___fieldOwners' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___internal___ignoreType' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___internal___mediaType' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___internal___owner' |
+  'childContentfulMinecraftPluginDescriptionTextNode___children___internal___type' |
+  'childContentfulMinecraftPluginDescriptionTextNode___internal___content' |
+  'childContentfulMinecraftPluginDescriptionTextNode___internal___contentDigest' |
+  'childContentfulMinecraftPluginDescriptionTextNode___internal___description' |
+  'childContentfulMinecraftPluginDescriptionTextNode___internal___fieldOwners' |
+  'childContentfulMinecraftPluginDescriptionTextNode___internal___ignoreType' |
+  'childContentfulMinecraftPluginDescriptionTextNode___internal___mediaType' |
+  'childContentfulMinecraftPluginDescriptionTextNode___internal___owner' |
+  'childContentfulMinecraftPluginDescriptionTextNode___internal___type' |
+  'childContentfulMinecraftPluginDescriptionTextNode___description' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___frontmatter___title' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___excerpt' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___rawMarkdownBody' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___html' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___htmlAst' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___excerptAst' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___headings' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___headings___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___headings___value' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___headings___depth' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___timeToRead' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___tableOfContents' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___wordCount___paragraphs' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___wordCount___sentences' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___wordCount___words' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___parent___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___parent___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___children___id' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___children___children' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___internal___content' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___internal___contentDigest' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___internal___description' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___internal___fieldOwners' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___internal___ignoreType' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___internal___mediaType' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___internal___owner' |
+  'childContentfulMinecraftPluginDescriptionTextNode___childMarkdownRemark___internal___type' |
+  'childContentfulMinecraftPluginBodyTextNode___id' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___id' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___parent___id' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___parent___children' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___children' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___children___id' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___children___children' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___internal___content' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___internal___contentDigest' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___internal___description' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___internal___fieldOwners' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___internal___ignoreType' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___internal___mediaType' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___internal___owner' |
+  'childContentfulMinecraftPluginBodyTextNode___parent___internal___type' |
+  'childContentfulMinecraftPluginBodyTextNode___children' |
+  'childContentfulMinecraftPluginBodyTextNode___children___id' |
+  'childContentfulMinecraftPluginBodyTextNode___children___parent___id' |
+  'childContentfulMinecraftPluginBodyTextNode___children___parent___children' |
+  'childContentfulMinecraftPluginBodyTextNode___children___children' |
+  'childContentfulMinecraftPluginBodyTextNode___children___children___id' |
+  'childContentfulMinecraftPluginBodyTextNode___children___children___children' |
+  'childContentfulMinecraftPluginBodyTextNode___children___internal___content' |
+  'childContentfulMinecraftPluginBodyTextNode___children___internal___contentDigest' |
+  'childContentfulMinecraftPluginBodyTextNode___children___internal___description' |
+  'childContentfulMinecraftPluginBodyTextNode___children___internal___fieldOwners' |
+  'childContentfulMinecraftPluginBodyTextNode___children___internal___ignoreType' |
+  'childContentfulMinecraftPluginBodyTextNode___children___internal___mediaType' |
+  'childContentfulMinecraftPluginBodyTextNode___children___internal___owner' |
+  'childContentfulMinecraftPluginBodyTextNode___children___internal___type' |
+  'childContentfulMinecraftPluginBodyTextNode___internal___content' |
+  'childContentfulMinecraftPluginBodyTextNode___internal___contentDigest' |
+  'childContentfulMinecraftPluginBodyTextNode___internal___description' |
+  'childContentfulMinecraftPluginBodyTextNode___internal___fieldOwners' |
+  'childContentfulMinecraftPluginBodyTextNode___internal___ignoreType' |
+  'childContentfulMinecraftPluginBodyTextNode___internal___mediaType' |
+  'childContentfulMinecraftPluginBodyTextNode___internal___owner' |
+  'childContentfulMinecraftPluginBodyTextNode___internal___type' |
+  'childContentfulMinecraftPluginBodyTextNode___body' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___id' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___frontmatter___title' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___excerpt' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___rawMarkdownBody' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___html' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___htmlAst' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___excerptAst' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___headings' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___headings___id' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___headings___value' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___headings___depth' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___timeToRead' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___tableOfContents' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___wordCount___paragraphs' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___wordCount___sentences' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___wordCount___words' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___parent___id' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___parent___children' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___children' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___children___id' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___children___children' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___internal___content' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___internal___contentDigest' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___internal___description' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___internal___fieldOwners' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___internal___ignoreType' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___internal___mediaType' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___internal___owner' |
+  'childContentfulMinecraftPluginBodyTextNode___childMarkdownRemark___internal___type';
+
+export type ContentfulMinecraftPluginFilterInput = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<ContentfulMinecraftPluginDescriptionTextNodeFilterInput>;
+  body?: Maybe<ContentfulMinecraftPluginBodyTextNodeFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulMinecraftPluginSysFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  childContentfulMinecraftPluginDescriptionTextNode?: Maybe<ContentfulMinecraftPluginDescriptionTextNodeFilterInput>;
+  childContentfulMinecraftPluginBodyTextNode?: Maybe<ContentfulMinecraftPluginBodyTextNodeFilterInput>;
+};
+
+export type ContentfulMinecraftPluginGroupConnection = {
+  totalCount: Scalars['Int'];
+  edges: Array<ContentfulMinecraftPluginEdge>;
+  nodes: Array<ContentfulMinecraftPlugin>;
+  pageInfo: PageInfo;
+  field: Scalars['String'];
+  fieldValue?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMinecraftPluginSortInput = {
+  fields?: Maybe<Array<Maybe<ContentfulMinecraftPluginFieldsEnum>>>;
+  order?: Maybe<Array<Maybe<SortOrderEnum>>>;
+};
+
+export type ContentfulMinecraftPluginSys = {
+  revision?: Maybe<Scalars['Int']>;
+  contentType?: Maybe<ContentfulMinecraftPluginSysContentType>;
+};
+
+export type ContentfulMinecraftPluginSysContentType = {
+  sys?: Maybe<ContentfulMinecraftPluginSysContentTypeSys>;
+};
+
+export type ContentfulMinecraftPluginSysContentTypeFilterInput = {
+  sys?: Maybe<ContentfulMinecraftPluginSysContentTypeSysFilterInput>;
+};
+
+export type ContentfulMinecraftPluginSysContentTypeSys = {
+  type?: Maybe<Scalars['String']>;
+  linkType?: Maybe<Scalars['String']>;
+  id?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
+};
+
+export type ContentfulMinecraftPluginSysContentTypeSysFilterInput = {
+  type?: Maybe<StringQueryOperatorInput>;
+  linkType?: Maybe<StringQueryOperatorInput>;
+  id?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type ContentfulMinecraftPluginSysFilterInput = {
+  revision?: Maybe<IntQueryOperatorInput>;
+  contentType?: Maybe<ContentfulMinecraftPluginSysContentTypeFilterInput>;
+};
+
 export type ContentfulResize = {
   base64?: Maybe<Scalars['String']>;
   tracedSVG?: Maybe<Scalars['String']>;
@@ -2145,6 +3046,12 @@ export type Query = {
   allMarkdownRemark: MarkdownRemarkConnection;
   contentfulAsset?: Maybe<ContentfulAsset>;
   allContentfulAsset: ContentfulAssetConnection;
+  contentfulMinecraftPluginBodyTextNode?: Maybe<ContentfulMinecraftPluginBodyTextNode>;
+  allContentfulMinecraftPluginBodyTextNode: ContentfulMinecraftPluginBodyTextNodeConnection;
+  contentfulMinecraftPluginDescriptionTextNode?: Maybe<ContentfulMinecraftPluginDescriptionTextNode>;
+  allContentfulMinecraftPluginDescriptionTextNode: ContentfulMinecraftPluginDescriptionTextNodeConnection;
+  contentfulMinecraftPlugin?: Maybe<ContentfulMinecraftPlugin>;
+  allContentfulMinecraftPlugin: ContentfulMinecraftPluginConnection;
   contentfulBlogPost1BodyTextNode?: Maybe<ContentfulBlogPost1BodyTextNode>;
   allContentfulBlogPost1BodyTextNode: ContentfulBlogPost1BodyTextNodeConnection;
   contentfulBlogPost1?: Maybe<ContentfulBlogPost1>;
@@ -2281,6 +3188,8 @@ export type QueryAllSitePageArgs = {
 export type QuerySiteArgs = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<DateQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2345,6 +3254,70 @@ export type QueryContentfulAssetArgs = {
 export type QueryAllContentfulAssetArgs = {
   filter?: Maybe<ContentfulAssetFilterInput>;
   sort?: Maybe<ContentfulAssetSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulMinecraftPluginBodyTextNodeArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  body?: Maybe<StringQueryOperatorInput>;
+  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+};
+
+
+export type QueryAllContentfulMinecraftPluginBodyTextNodeArgs = {
+  filter?: Maybe<ContentfulMinecraftPluginBodyTextNodeFilterInput>;
+  sort?: Maybe<ContentfulMinecraftPluginBodyTextNodeSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulMinecraftPluginDescriptionTextNodeArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  description?: Maybe<StringQueryOperatorInput>;
+  childMarkdownRemark?: Maybe<MarkdownRemarkFilterInput>;
+};
+
+
+export type QueryAllContentfulMinecraftPluginDescriptionTextNodeArgs = {
+  filter?: Maybe<ContentfulMinecraftPluginDescriptionTextNodeFilterInput>;
+  sort?: Maybe<ContentfulMinecraftPluginDescriptionTextNodeSortInput>;
+  skip?: Maybe<Scalars['Int']>;
+  limit?: Maybe<Scalars['Int']>;
+};
+
+
+export type QueryContentfulMinecraftPluginArgs = {
+  id?: Maybe<StringQueryOperatorInput>;
+  parent?: Maybe<NodeFilterInput>;
+  children?: Maybe<NodeFilterListInput>;
+  internal?: Maybe<InternalFilterInput>;
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<ContentfulMinecraftPluginDescriptionTextNodeFilterInput>;
+  body?: Maybe<ContentfulMinecraftPluginBodyTextNodeFilterInput>;
+  spaceId?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+  createdAt?: Maybe<DateQueryOperatorInput>;
+  updatedAt?: Maybe<DateQueryOperatorInput>;
+  sys?: Maybe<ContentfulMinecraftPluginSysFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  childContentfulMinecraftPluginDescriptionTextNode?: Maybe<ContentfulMinecraftPluginDescriptionTextNodeFilterInput>;
+  childContentfulMinecraftPluginBodyTextNode?: Maybe<ContentfulMinecraftPluginBodyTextNodeFilterInput>;
+};
+
+
+export type QueryAllContentfulMinecraftPluginArgs = {
+  filter?: Maybe<ContentfulMinecraftPluginFilterInput>;
+  sort?: Maybe<ContentfulMinecraftPluginSortInput>;
   skip?: Maybe<Scalars['Int']>;
   limit?: Maybe<Scalars['Int']>;
 };
@@ -2457,6 +3430,8 @@ export type QueryAllSitePluginArgs = {
 export type Site = Node & {
   buildTime?: Maybe<Scalars['Date']>;
   siteMetadata?: Maybe<SiteSiteMetadata>;
+  port?: Maybe<Scalars['Date']>;
+  host?: Maybe<Scalars['String']>;
   polyfill?: Maybe<Scalars['Boolean']>;
   pathPrefix?: Maybe<Scalars['String']>;
   id: Scalars['ID'];
@@ -2467,6 +3442,14 @@ export type Site = Node & {
 
 
 export type SiteBuildTimeArgs = {
+  formatString?: Maybe<Scalars['String']>;
+  fromNow?: Maybe<Scalars['Boolean']>;
+  difference?: Maybe<Scalars['String']>;
+  locale?: Maybe<Scalars['String']>;
+};
+
+
+export type SitePortArgs = {
   formatString?: Maybe<Scalars['String']>;
   fromNow?: Maybe<Scalars['Boolean']>;
   difference?: Maybe<Scalars['String']>;
@@ -2660,6 +3643,8 @@ export type SiteFieldsEnum =
   'siteMetadata___authors' |
   'siteMetadata___authors___name' |
   'siteMetadata___authors___slug' |
+  'port' |
+  'host' |
   'polyfill' |
   'pathPrefix' |
   'id' |
@@ -2752,6 +3737,8 @@ export type SiteFieldsEnum =
 export type SiteFilterInput = {
   buildTime?: Maybe<DateQueryOperatorInput>;
   siteMetadata?: Maybe<SiteSiteMetadataFilterInput>;
+  port?: Maybe<DateQueryOperatorInput>;
+  host?: Maybe<StringQueryOperatorInput>;
   polyfill?: Maybe<BooleanQueryOperatorInput>;
   pathPrefix?: Maybe<StringQueryOperatorInput>;
   id?: Maybe<StringQueryOperatorInput>;
@@ -2812,6 +3799,7 @@ export type SitePageContext = {
   language?: Maybe<Scalars['String']>;
   intl?: Maybe<SitePageContextIntl>;
   blogPosts?: Maybe<SitePageContextBlogPosts>;
+  contents?: Maybe<SitePageContextContents>;
 };
 
 export type SitePageContextBlogPosts = {
@@ -2996,11 +3984,202 @@ export type SitePageContextBlogPostsJdRhIxjsIowkvvC69T5aDJaFilterInput = {
   createdAt?: Maybe<DateQueryOperatorInput>;
 };
 
+export type SitePageContextContents = {
+  ja?: Maybe<SitePageContextContentsJa>;
+  en?: Maybe<SitePageContextContentsEn>;
+  _28oplOdibxbGimUGIubCxn?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxn>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxn = {
+  ja?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnJa>;
+  en?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnEn>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnEn = {
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  description?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnEnDescription>;
+  body?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnEnBody>;
+  node_locale?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnEnBody = {
+  childMarkdownRemark?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnEnBodyChildMarkdownRemark>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnEnBodyChildMarkdownRemark = {
+  html?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnEnBodyChildMarkdownRemarkFilterInput = {
+  html?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnEnBodyFilterInput = {
+  childMarkdownRemark?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnEnBodyChildMarkdownRemarkFilterInput>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnEnDescription = {
+  description?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnEnDescriptionFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnEnFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnEnDescriptionFilterInput>;
+  body?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnEnBodyFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnFilterInput = {
+  ja?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnJaFilterInput>;
+  en?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnEnFilterInput>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnJa = {
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  description?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnJaDescription>;
+  body?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnJaBody>;
+  node_locale?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnJaBody = {
+  childMarkdownRemark?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnJaBodyChildMarkdownRemark>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnJaBodyChildMarkdownRemark = {
+  html?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnJaBodyChildMarkdownRemarkFilterInput = {
+  html?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnJaBodyFilterInput = {
+  childMarkdownRemark?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnJaBodyChildMarkdownRemarkFilterInput>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnJaDescription = {
+  description?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnJaDescriptionFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_28oplOdibxbGimUgIubCxnJaFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnJaDescriptionFilterInput>;
+  body?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnJaBodyFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContentsEn = {
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  description?: Maybe<SitePageContextContentsEnDescription>;
+  body?: Maybe<SitePageContextContentsEnBody>;
+  node_locale?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContentsEnBody = {
+  childMarkdownRemark?: Maybe<SitePageContextContentsEnBodyChildMarkdownRemark>;
+};
+
+export type SitePageContextContentsEnBodyChildMarkdownRemark = {
+  html?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContentsEnBodyChildMarkdownRemarkFilterInput = {
+  html?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContentsEnBodyFilterInput = {
+  childMarkdownRemark?: Maybe<SitePageContextContentsEnBodyChildMarkdownRemarkFilterInput>;
+};
+
+export type SitePageContextContentsEnDescription = {
+  description?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContentsEnDescriptionFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContentsEnFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<SitePageContextContentsEnDescriptionFilterInput>;
+  body?: Maybe<SitePageContextContentsEnBodyFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContentsFilterInput = {
+  ja?: Maybe<SitePageContextContentsJaFilterInput>;
+  en?: Maybe<SitePageContextContentsEnFilterInput>;
+  _28oplOdibxbGimUGIubCxn?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnFilterInput>;
+};
+
+export type SitePageContextContentsJa = {
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  description?: Maybe<SitePageContextContentsJaDescription>;
+  body?: Maybe<SitePageContextContentsJaBody>;
+  node_locale?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContentsJaBody = {
+  childMarkdownRemark?: Maybe<SitePageContextContentsJaBodyChildMarkdownRemark>;
+};
+
+export type SitePageContextContentsJaBodyChildMarkdownRemark = {
+  html?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContentsJaBodyChildMarkdownRemarkFilterInput = {
+  html?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContentsJaBodyFilterInput = {
+  childMarkdownRemark?: Maybe<SitePageContextContentsJaBodyChildMarkdownRemarkFilterInput>;
+};
+
+export type SitePageContextContentsJaDescription = {
+  description?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContentsJaDescriptionFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContentsJaFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<SitePageContextContentsJaDescriptionFilterInput>;
+  body?: Maybe<SitePageContextContentsJaBodyFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+};
+
 export type SitePageContextFilterInput = {
   post?: Maybe<SitePageContextPostFilterInput>;
   language?: Maybe<StringQueryOperatorInput>;
   intl?: Maybe<SitePageContextIntlFilterInput>;
   blogPosts?: Maybe<SitePageContextBlogPostsFilterInput>;
+  contents?: Maybe<SitePageContextContentsFilterInput>;
 };
 
 export type SitePageContextIntl = {
@@ -3203,6 +4382,14 @@ export type SitePageFieldsEnum =
   'context___intl___originalPath' |
   'context___intl___redirect' |
   'context___intl___defaultLanguage' |
+  'context___contents___ja___title' |
+  'context___contents___ja___slug' |
+  'context___contents___ja___node_locale' |
+  'context___contents___ja___contentful_id' |
+  'context___contents___en___title' |
+  'context___contents___en___slug' |
+  'context___contents___en___node_locale' |
+  'context___contents___en___contentful_id' |
   'pluginCreator___id' |
   'pluginCreator___parent___id' |
   'pluginCreator___parent___parent___id' |
