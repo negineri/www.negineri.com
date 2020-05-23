@@ -1,8 +1,10 @@
 name: deploy
 on:
+  repository_dispatch:
+    types: [contentful_update]
   push:
     branches:
-    - master
+      - master
 jobs:
   build-deploy:
     name: build and scp
@@ -14,28 +16,27 @@ jobs:
       GATSBY_CONTENTFUL_SPACE_ID: ${{ secrets.GATSBY_CONTENTFUL_SPACE_ID }}
       GATSBY_CONTENTFUL_API_KEY: ${{ secrets.GATSBY_CONTENTFUL_API_KEY }}
     steps:
-    - uses: actions/checkout@v2
-    - name: Install SSH Key
-      uses: shimataro/ssh-key-action@v2
-      with:
-        key: ${{ secrets.SSH_KEY }}
-        known_hosts: ${{ secrets.KNOWN_HOSTS }}
-        config: ${{ secrets.SSH_CONFIG }}
-    - name: setup node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '12.x'
-    - name: Cache dependencies
-      uses: actions/cache@v1
-      with:
-        path: ~/.npm
-        key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-        restore-keys: |
-          ${{ runner.os }}-node-
-    - name: install
-      run: npm ci
-    - name: build
-      run: npx gatsby build
-    - name: deploy
-      run: ./deploy.sh
-    
+      - uses: actions/checkout@v2
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: ${{ secrets.SSH_CONFIG }}
+      - name: setup node
+        uses: actions/setup-node@v1
+        with:
+          node-version: "12.x"
+      - name: Cache dependencies
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: install
+        run: npm ci
+      - name: build
+        run: npx gatsby build
+      - name: deploy
+        run: ./deploy.sh
