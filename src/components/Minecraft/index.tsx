@@ -22,6 +22,8 @@ const Component: React.FC = () => {
         <Text>IP Address:</Text>
         <Text marginLeft="2">minecraft.negineri.com</Text>
       </Flex>
+      <Heading>Map</Heading>
+      <a href="https://dynmap.negineri.com/">Dynmap</a>
     </Box>
   )
 }
