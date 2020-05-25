@@ -13,16 +13,25 @@ const Component: React.FC = () => {
     <Box>
       <Heading as="h1">{t(messages.title)}</Heading>
       <p>{t(messages.description)}</p>
-      <Heading>Version</Heading>
+      <Heading>{t(messages.rule)}</Heading>
+      <p>{t(messages.ruleDescription1)}</p>
+      <p>{t(messages.ruleDescription2)}</p>
+      <p>{t(messages.ruleDescription3)}</p>
+      <Heading>{t(messages.prohibitedMatters)}</Heading>
+      <ul>
+        <li>{t(messages.prohibitedMatters1)}</li>
+        <li>{t(messages.prohibitedMatters2)}</li>
+      </ul>
+      <Heading>{t(messages.version)}</Heading>
       <Text>PaperMC 1.15.2</Text>
-      <Heading>Plugins</Heading>
-      <Link to="/minecraft/plugins/">List</Link>
-      <Heading>Address</Heading>
+      <Heading>{t(messages.plugins)}</Heading>
+      <Link to="/minecraft/plugins/">{t(messages.pluginsList)}</Link>
+      <Heading>{t(messages.address)}</Heading>
       <Flex>
         <Text>IP Address:</Text>
         <Text marginLeft="2">minecraft.negineri.com</Text>
       </Flex>
-      <Heading>Map</Heading>
+      <Heading>{t(messages.map)}</Heading>
       <a href="https://dynmap.negineri.com/">Dynmap</a>
     </Box>
   )

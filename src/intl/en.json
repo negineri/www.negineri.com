@@ -3,7 +3,20 @@
   "components.Home.blogPosts": "Posts",
   "components.Home.description": "Negi NOC is a personal website operated by negineri. This website is hosting tech blog and game servers.",
   "components.Home.services": "In Operation",
+  "components.Minecraft.address": "Address",
   "components.Minecraft.description": "This is disordered world.",
+  "components.Minecraft.map": "Map",
+  "components.Minecraft.plugins": "Plugins",
+  "components.Minecraft.pluginsList": "List",
+  "components.Minecraft.prohibitedMatters": "Prohibited Matters",
+  "components.Minecraft.prohibitedMatters1": "Continuously overloading the server",
+  "components.Minecraft.prohibitedMatters2": "Using Cheats",
+  "components.Minecraft.rule": "Rule",
+  "components.Minecraft.ruleDescription1": "You can do whatever you want except what is prohibited.",
+  "components.Minecraft.ruleDescription2": "Players should take advantage of commands such as WorldGuard to defend themselves.",
+  "components.Minecraft.ruleDescription3": "BAN may be performed when the prohibited actions are confirmed.",
   "components.Minecraft.title": "Ruten Server (Minecraft)",
-  "templates.blog.posts.title": "Posts"
+  "components.Minecraft.version": "Version",
+  "templates.blog.posts.title": "Posts",
+  "templates.minecraft.plugins.title": "Plugins"
 }

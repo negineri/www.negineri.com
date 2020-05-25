@@ -3,7 +3,20 @@
   "components.Home.blogPosts": "投稿一覧",
   "components.Home.description": "negineriの個人webサイトです。技術系ブログとゲームサーバーの運営を行っています。",
   "components.Home.services": "運用中",
+  "components.Minecraft.address": "アドレス",
   "components.Minecraft.description": "窃盗、PvP、生活、共謀、全てが許される無法地帯です",
+  "components.Minecraft.map": "地図",
+  "components.Minecraft.plugins": "プラグイン",
+  "components.Minecraft.pluginsList": "一覧",
+  "components.Minecraft.prohibitedMatters": "禁止事項",
+  "components.Minecraft.prohibitedMatters1": "サーバーに継続して過大な負荷をかける行為",
+  "components.Minecraft.prohibitedMatters2": "チートの利用",
+  "components.Minecraft.rule": "ルール",
+  "components.Minecraft.ruleDescription1": "禁止事項以外は何をやっても構いません。",
+  "components.Minecraft.ruleDescription2": "プレイヤーはWorldGuardなどのコマンドを活用して自衛に務めてください。",
+  "components.Minecraft.ruleDescription3": "禁止事項を確認した場合BANを行うことがあります。",
   "components.Minecraft.title": "流転鯖 (Minecraft)",
-  "templates.blog.posts.title": "投稿一覧"
+  "components.Minecraft.version": "バージョン",
+  "templates.blog.posts.title": "投稿一覧",
+  "templates.minecraft.plugins.title": "プラグイン一覧"
 }
