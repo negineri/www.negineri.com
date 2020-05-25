@@ -16,5 +16,5 @@ export default defineMessages({
   plugins: "Plugins",
   pluginsList: "List",
   address: "Address",
-  map: "Map",
+  map: "Map (Undisclosed)",
 })
