@@ -3987,21 +3987,22 @@ export type SitePageContextBlogPostsJdRhIxjsIowkvvC69T5aDJaFilterInput = {
 export type SitePageContextContents = {
   ja?: Maybe<SitePageContextContentsJa>;
   en?: Maybe<SitePageContextContentsEn>;
+  _5noNGxDJjdxHDZRzaPnC8b?: Maybe<SitePageContextContents_5noNGxDJjdxHdzRzaPnC8b>;
   _24L9mnqEBDK8L2vdjKtEWe?: Maybe<SitePageContextContents_24L9mnqEbdk8L2vdjKtEWe>;
   _2a3PuMGDVBtC2Yj1iA1QX2?: Maybe<SitePageContextContents_2a3PuMgdvBtC2Yj1iA1Qx2>;
   _28oplOdibxbGimUGIubCxn?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxn>;
   _1oyo6jOm9JYZfYCYrN5kuY?: Maybe<SitePageContextContents_1oyo6jOm9JyZfYcYrN5kuY>;
-  _5noNGxDJjdxHDZRzaPnC8b?: Maybe<SitePageContextContents_5noNGxDJjdxHdzRzaPnC8b>;
   _6yK9yno9HiI40huAvyL4Ui?: Maybe<SitePageContextContents_6yK9yno9HiI40huAvyL4Ui>;
   S3BDA2aDB665RYJRKluo2?: Maybe<SitePageContextContentsS3Bda2aDb665RyjrKluo2>;
   _4Q36PPeOdcI7akE7i7o09Y?: Maybe<SitePageContextContents_4Q36PPeOdcI7akE7i7o09Y>;
   _3kuqefJH06undEWEYlsuVD?: Maybe<SitePageContextContents_3kuqefJh06undEweYlsuVd>;
   t3PY77IEBryB81o81ZfBx?: Maybe<SitePageContextContentsT3Py77IeBryB81o81ZfBx>;
-  _4scRDMGCOD4FCrfTe1m6a6?: Maybe<SitePageContextContents_4scRdmgcod4FCrfTe1m6a6>;
   _15qyV2wXBLx7uIoeoY0pkK?: Maybe<SitePageContextContents_15qyV2wXbLx7uIoeoY0pkK>;
+  _4scRDMGCOD4FCrfTe1m6a6?: Maybe<SitePageContextContents_4scRdmgcod4FCrfTe1m6a6>;
   _47LQnfd860HadKUlsCiUv6?: Maybe<SitePageContextContents_47LQnfd860HadKUlsCiUv6>;
   _10oqFsMcr7FDFvxmapkGRq?: Maybe<SitePageContextContents_10oqFsMcr7FdFvxmapkGRq>;
   _7BOAySzbnzTLWeCJM0atSF?: Maybe<SitePageContextContents_7BoAySzbnzTlWeCjm0atSf>;
+  _1dyp1nVCAjMfaN4597UQv7?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7>;
 };
 
 export type SitePageContextContents_10oqFsMcr7FdFvxmapkGRq = {
@@ -4188,6 +4189,100 @@ export type SitePageContextContents_15qyV2wXbLx7uIoeoY0pkKJaFilterInput = {
   slug?: Maybe<StringQueryOperatorInput>;
   description?: Maybe<SitePageContextContents_15qyV2wXbLx7uIoeoY0pkKJaDescriptionFilterInput>;
   body?: Maybe<SitePageContextContents_15qyV2wXbLx7uIoeoY0pkKJaBodyFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7 = {
+  ja?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7Ja>;
+  en?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7En>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7En = {
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  description?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnDescription>;
+  body?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnBody>;
+  node_locale?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnBody = {
+  childMarkdownRemark?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnBodyChildMarkdownRemark>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnBodyChildMarkdownRemark = {
+  html?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnBodyChildMarkdownRemarkFilterInput = {
+  html?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnBodyFilterInput = {
+  childMarkdownRemark?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnBodyChildMarkdownRemarkFilterInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnDescription = {
+  description?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnDescriptionFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnDescriptionFilterInput>;
+  body?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnBodyFilterInput>;
+  node_locale?: Maybe<StringQueryOperatorInput>;
+  contentful_id?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7FilterInput = {
+  ja?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaFilterInput>;
+  en?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7EnFilterInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7Ja = {
+  title?: Maybe<Scalars['String']>;
+  slug?: Maybe<Scalars['String']>;
+  description?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaDescription>;
+  body?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaBody>;
+  node_locale?: Maybe<Scalars['String']>;
+  contentful_id?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaBody = {
+  childMarkdownRemark?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaBodyChildMarkdownRemark>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaBodyChildMarkdownRemark = {
+  html?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaBodyChildMarkdownRemarkFilterInput = {
+  html?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaBodyFilterInput = {
+  childMarkdownRemark?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaBodyChildMarkdownRemarkFilterInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaDescription = {
+  description?: Maybe<Scalars['String']>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaDescriptionFilterInput = {
+  description?: Maybe<StringQueryOperatorInput>;
+};
+
+export type SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaFilterInput = {
+  title?: Maybe<StringQueryOperatorInput>;
+  slug?: Maybe<StringQueryOperatorInput>;
+  description?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaDescriptionFilterInput>;
+  body?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7JaBodyFilterInput>;
   node_locale?: Maybe<StringQueryOperatorInput>;
   contentful_id?: Maybe<StringQueryOperatorInput>;
 };
@@ -5271,21 +5366,22 @@ export type SitePageContextContentsEnFilterInput = {
 export type SitePageContextContentsFilterInput = {
   ja?: Maybe<SitePageContextContentsJaFilterInput>;
   en?: Maybe<SitePageContextContentsEnFilterInput>;
+  _5noNGxDJjdxHDZRzaPnC8b?: Maybe<SitePageContextContents_5noNGxDJjdxHdzRzaPnC8bFilterInput>;
   _24L9mnqEBDK8L2vdjKtEWe?: Maybe<SitePageContextContents_24L9mnqEbdk8L2vdjKtEWeFilterInput>;
   _2a3PuMGDVBtC2Yj1iA1QX2?: Maybe<SitePageContextContents_2a3PuMgdvBtC2Yj1iA1Qx2FilterInput>;
   _28oplOdibxbGimUGIubCxn?: Maybe<SitePageContextContents_28oplOdibxbGimUgIubCxnFilterInput>;
   _1oyo6jOm9JYZfYCYrN5kuY?: Maybe<SitePageContextContents_1oyo6jOm9JyZfYcYrN5kuYFilterInput>;
-  _5noNGxDJjdxHDZRzaPnC8b?: Maybe<SitePageContextContents_5noNGxDJjdxHdzRzaPnC8bFilterInput>;
   _6yK9yno9HiI40huAvyL4Ui?: Maybe<SitePageContextContents_6yK9yno9HiI40huAvyL4UiFilterInput>;
   S3BDA2aDB665RYJRKluo2?: Maybe<SitePageContextContentsS3Bda2aDb665RyjrKluo2FilterInput>;
   _4Q36PPeOdcI7akE7i7o09Y?: Maybe<SitePageContextContents_4Q36PPeOdcI7akE7i7o09YFilterInput>;
   _3kuqefJH06undEWEYlsuVD?: Maybe<SitePageContextContents_3kuqefJh06undEweYlsuVdFilterInput>;
   t3PY77IEBryB81o81ZfBx?: Maybe<SitePageContextContentsT3Py77IeBryB81o81ZfBxFilterInput>;
-  _4scRDMGCOD4FCrfTe1m6a6?: Maybe<SitePageContextContents_4scRdmgcod4FCrfTe1m6a6FilterInput>;
   _15qyV2wXBLx7uIoeoY0pkK?: Maybe<SitePageContextContents_15qyV2wXbLx7uIoeoY0pkKFilterInput>;
+  _4scRDMGCOD4FCrfTe1m6a6?: Maybe<SitePageContextContents_4scRdmgcod4FCrfTe1m6a6FilterInput>;
   _47LQnfd860HadKUlsCiUv6?: Maybe<SitePageContextContents_47LQnfd860HadKUlsCiUv6FilterInput>;
   _10oqFsMcr7FDFvxmapkGRq?: Maybe<SitePageContextContents_10oqFsMcr7FdFvxmapkGRqFilterInput>;
   _7BOAySzbnzTLWeCJM0atSF?: Maybe<SitePageContextContents_7BoAySzbnzTlWeCjm0atSfFilterInput>;
+  _1dyp1nVCAjMfaN4597UQv7?: Maybe<SitePageContextContents_1dyp1nVcAjMfaN4597UQv7FilterInput>;
 };
 
 export type SitePageContextContentsJa = {
@@ -5827,6 +5923,7 @@ export type SitePageFieldsEnum =
   'pluginCreator___pluginOptions___languages' |
   'pluginCreator___pluginOptions___defaultLanguage' |
   'pluginCreator___pluginOptions___redirect' |
+  'pluginCreator___pluginOptions___extensions' |
   'pluginCreator___pluginOptions___pathCheck' |
   'pluginCreator___nodeAPIs' |
   'pluginCreator___browserAPIs' |
@@ -6027,6 +6124,7 @@ export type SitePluginFieldsEnum =
   'pluginOptions___languages' |
   'pluginOptions___defaultLanguage' |
   'pluginOptions___redirect' |
+  'pluginOptions___extensions' |
   'pluginOptions___pathCheck' |
   'nodeAPIs' |
   'browserAPIs' |
@@ -6148,6 +6246,7 @@ export type SitePluginPluginOptions = {
   languages?: Maybe<Array<Maybe<Scalars['String']>>>;
   defaultLanguage?: Maybe<Scalars['String']>;
   redirect?: Maybe<Scalars['Boolean']>;
+  extensions?: Maybe<Array<Maybe<Scalars['String']>>>;
   pathCheck?: Maybe<Scalars['Boolean']>;
 };
 
@@ -6160,6 +6259,7 @@ export type SitePluginPluginOptionsFilterInput = {
   languages?: Maybe<StringQueryOperatorInput>;
   defaultLanguage?: Maybe<StringQueryOperatorInput>;
   redirect?: Maybe<BooleanQueryOperatorInput>;
+  extensions?: Maybe<StringQueryOperatorInput>;
   pathCheck?: Maybe<BooleanQueryOperatorInput>;
 };
 

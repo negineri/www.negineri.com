@@ -7,6 +7,7 @@ import { Link } from "gatsby-plugin-intl"
 import Head from "src/components/head"
 import { IconContext } from "react-icons"
 import { MdBrightness4, MdBrightness7 } from "react-icons/md"
+import { AiFillGithub } from "react-icons/ai"
 import "focus-visible"
 
 const Component: React.FC = ({ children }) => {
@@ -56,6 +57,25 @@ const Component: React.FC = ({ children }) => {
               marginLeft: "auto",
             }}
           >
+            <a
+              href="https://github.com/negineri"
+              sx={{
+                display: "inline-block",
+                textAlign: "center",
+                height: "32px",
+                lineHeight: "32px",
+                width: "32px",
+                borderRadius: "50%",
+                margin: 0,
+                padding: 0,
+                variant: "buttons.primary",
+                verticalAlign: "middle",
+              }}
+            >
+              <IconContext.Provider value={{ size: "24px" }}>
+                <AiFillGithub sx={{ verticalAlign: "middle" }} />
+              </IconContext.Provider>
+            </a>
             <Button
               onClick={(e) => {
                 setColorMode(colorMode === "default" ? "dark" : "default")
@@ -65,6 +85,7 @@ const Component: React.FC = ({ children }) => {
                 width: "32px",
                 borderRadius: "50%",
                 padding: "0px",
+                verticalAlign: "middle",
               }}
             >
               <IconContext.Provider value={{ size: "24px" }}>
