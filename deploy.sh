@@ -1,2 +1,2 @@
 #!/bin/sh
-rsync -rtDcvz --delete ./public/ negineri@ginga.negineri.com:/var/www/html/
+rsync -rtDcvz --delete -e "ssh negineri@ops.negineri.com ssh" ./public/ negineri@docker.negineri.com:/var/www/html/
